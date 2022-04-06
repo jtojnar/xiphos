@@ -62,10 +62,9 @@ jobs:
         id: build
         run: |
           set -ex
-          curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-          chmod +x docker-build
-          python docker-build --name ${{ matrix.distro }} --config .ci-build.yml --install
-          python docker-build --name ${{ matrix.distro }} -vvvv --config .ci-build.yml --build scripts
+          chmod +x docker-build.py
+          python docker-build.py --name ${{ matrix.distro }} --config .ci-build.yml --install
+          python docker-build.py --name ${{ matrix.distro }} -vvvv --config .ci-build.yml --build scripts
         env:
           TEMP: ${{ runner.temp }}
       - name: upload source tarball
