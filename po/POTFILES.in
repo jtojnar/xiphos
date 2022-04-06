@@ -117,4 +117,4 @@ ui/xi-menus.glade
 [type: gettext/glade]ui/xi-menus.gtkbuilder
 [type: gettext/glade]ui/xi-menus-popup.gtkbuilder
 ## application files
-desktop/xiphos.desktop.in
+xiphos.desktop.in.in
